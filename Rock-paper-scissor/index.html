@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rock Paper Scissors Game</title> 
+        <link rel="stylesheet" href="styles.css">
+        <script src="app.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class = "scoreboard">
+                <div class = "title">
+                    <img src='images/title.png' />  
+                </div>
+                <div class="score">
+                    <p>SCORE</p>
+                    <h1>0</h1>
+                </div>
+            </div>
+            <div class="hands">
+                <div class="hand paper">
+                  <img src="images/Paper.png" onclick="pickUserHand('paper')" />
+                </div>
+                <div class="hand scissors">
+                  <img src="images/Scissors.png" onclick="pickUserHand('scissors')" />
+                </div>
+                <div class="hand rock">
+                  <img src="images/Rock.png" onclick="pickUserHand('rock')" />                        
+                </div>
+                <div class = "rules">   
+                    <div class="rulebox" id="ruleimg" onclick="rulesDisplay()">RULES</div>
+                </div>
+                
+          </div>
+          <div class="contest">       
+            <div class="userhand">
+                <h1>YOU PICKED</h1>
+                <div class="handImageContainer">
+                  <img id="userPickImage" src="images/Paper.png">
+                </div>
+            </div>
+            <div class="referee"> 
+                <div class="decision"><h1> YOU WIN! </h1></div>
+                <div class="newGame" onclick="restartGame()">PLAY AGAIN</div>
+            </div>
+            <div class="computerhand">
+                <h1>THE HOUSE PICKED</h1>
+                <div class="handImageContainer">
+                  <img id = "compPickImage" src='images/Scissors.png' /> 
+                </div>   
+            </div>              
+          </div>    
+         
+          <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+          
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01" src="images/image-rules.svg">
+    
+          </div>
+        </div>
+       
+    </body>
+</html>

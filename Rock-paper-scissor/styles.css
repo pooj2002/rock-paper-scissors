@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(
+    134.34% 134.34% at 50% 0%,
+    #1f3757 0%,
+    #131537 100%
+  );
+}
+
+.scoreboard {
+  width: 700px;
+  height: 150px;
+  border-radius: 15px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.title {
+  padding-left: 30px;
+}
+
+.score {
+  width: 150px;
+  height: 114px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score h1 {
+  color: #565468;
+  font-size: 56px;
+  font-family: "Barlow", sans-serif;
+}
+
+.score p {
+  color: #2a45c2;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 2.5px;
+  text-align: left;
+}
+
+.hands {
+  background-image: url("images/bg-triangle.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  visibility: visible;
+  opacity: 1;
+  position: relative;
+  width: 476px;
+  height: 430px;
+  margin-top: 50px;
+  display: flex;
+  z-index: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.scissors {
+  margin-left: 20px;
+}
+
+.paper {
+  margin-right: 20px;
+}
+
+.hands .hand {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.hands .hand:hover {
+  transform: translate3d(0px, -8px, 0px);
+}
+
+.contest {
+  margin-top: 10px;
+  display: none;
+  width: 900px;
+}
+
+.contest img {
+  width: 275px;
+  height: 275px;
+}
+
+.contest > div {
+  flex: 1;
+}
+
+.contest h1 {
+  color: white;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.contest .newGame {
+  color: hsl(229, 25%, 31%);
+  background-color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.newGame:hover {
+  background-color: turquoise;
+  transform: translate3d(0px, -8px, 0px);
+}
+
+.referee {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.referee h1 {
+  font-size: 45px;
+  color: white;
+}
+
+.computerhand {
+  display: flex;
+  flex-direction: column;
+}
+.rules {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.rulebox {
+  position: absolute;
+  top: 50;
+  right: -600px;
+  bottom: -50px;
+  border: 1px solid white;
+  border-radius: 6px;
+  width: 150px;
+  font-size: 30px;
+  padding: 10px;
+  margin-right: 10px;
+  color: white;
+  text-align: center;
+  transition: all 0.2s;
+}
+.rulebox:hover {
+  cursor: pointer;
+  background-color: turquoise;
+  transform: translate3d(0px, -8px, 0px);
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: radial-gradient(
+    134.34% 134.34% at 50% 0%,
+    #1f3757 0%,
+    #131537 100%
+  );
+  /* Fallback color */
+}
+
+.modal-content {
+  margin-top: 100px;
+  margin-left: 500px;
+  display: block;
+  width: 30%;
+  max-width: 700px;
+  background-color: white;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: red;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover {
+  cursor: pointer;
+}
